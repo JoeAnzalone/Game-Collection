@@ -45,8 +45,8 @@ def get_tgdb_platform_name(platform)
         'Super Nintendo Entertainment System' => 'Super Nintendo (SNES)',
         'Wii'                                 => 'Nintendo Wii',
         'Wii U'                               => 'Nintendo Wii U',
-        'Playstation'                         => 'Sony Playstation',
-        'Playstation 2'                       => 'Sony Playstation 2',
+        'PlayStation'                         => 'Sony Playstation',
+        'PlayStation 2'                       => 'Sony Playstation 2',
         'PlayStation Portable'                => 'Sony PSP',
         'Xbox 360'                            => 'Microsoft Xbox 360',
     }
