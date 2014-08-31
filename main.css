@@ -38,6 +38,10 @@ body {
     font-weight: bold;
 }
 
+.game .image img {
+    max-width: 250px;
+}
+
 table {
     width: 100%;
 }

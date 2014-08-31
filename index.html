@@ -19,13 +19,20 @@
         <table class="games">
             <thead>
                 <tr>
-                    <th>Game</th> <th>Platform</th>
+                    <th>Game</th> <th>Image</th> <th>Platform</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="game" ng-repeat="game in games | orderBy:order_by">
                     <td>
                       <div class="name"><a target="_blank" ng-href="{{ game.url }}" >{{ game.name }}</a></div>
+                    </td>
+                    <td>
+                      <div class="image" ng-show="game.image">
+                        <a target="_blank" ng-href="{{ game.image.img_url }}">
+                          <img ng-src="{{ game.image.img_url }}" alt="Cover art for {{ game.name }}">
+                        </a>
+                      </div>
                     </td>
                     <td class="platform"><a target="_blank" ng-href="{{ game.platform.url }}">{{ game.platform.name }}</a></td>
                 </tr>
