@@ -10,6 +10,9 @@
     <div class="page-wrap">
         <div class="controls">
             <fieldset>
+                <label>Search: <input type="search" ng-model="query"></label>
+            </fieldset>
+            <fieldset>
               Sort by:
                 <label><input type="radio" value="name" ng-model="order_by">Game Title</label>
                 <label><input type="radio" value="platform.name" ng-model="order_by">Platform</label>
@@ -23,7 +26,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="game" ng-repeat="game in games | orderBy:order_by">
+                <tr class="game" ng-repeat="game in games | orderBy:order_by | filter:query">
                     <td>
                       <div class="name"><a target="_blank" ng-href="{{ game.url }}" >{{ game.name }}</a></div>
                     </td>
