@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gameCollection">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game Collection</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="GameCollectionCtrl">
+    <div class="page-wrap">
+        <div class="controls">
+            <fieldset>
+              Sort by:
+                <label><input type="radio" value="name" ng-model="order_by">Game Title</label>
+                <label><input type="radio" value="platform.name" ng-model="order_by">Platform</label>
+            </fieldset>
+        </div>
+
+        <table class="games">
+            <thead>
+                <tr>
+                    <th>Game</th> <th>Platform</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="game" ng-repeat="game in games | orderBy:order_by">
+                    <td>
+                      <div class="name"><a target="_blank" ng-href="{{ game.url }}" >{{ game.name }}</a></div>
+                    </td>
+                    <td class="platform"><a target="_blank" ng-href="{{ game.platform.url }}">{{ game.platform.name }}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script type="text/JavaScript" src="app.js"></script>
+</body>
+</html>
+<!--
+                       88
+                       88
+                       88
+                       88   ,adPPYba,    ,adPPYba,
+                       88  a8"     "8a  a8P_____88
+                       88  8b       d8  8PP"""""""
+       db      88,   ,d88  "8a,   ,a8"  "8b,   ,aa    88
+      d88b      "Y8888P"    `"YbbdP"'    `"Ybbd8"'    88
+     d8'`8b                                           88
+    d8'  `8b      8b,dPPYba,   888888888  ,adPPYYba,  88   ,adPPYba,   8b,dPPYba,    ,adPPYba,
+   d8YaaaaY8b     88P'   `"8a       a8P"  ""     `Y8  88  a8"     "8a  88P'   `"8a  a8P_____88
+  d8""""""""8b    88       88    ,d8P'    ,adPPPPP88  88  8b       d8  88       88  8PP"""""""
+ d8'        `8b   88       88  ,d8"       88,    ,88  88  "8a,   ,a8"  88       88  "8b,   ,aa
+d8'          `8b  88       88  888888888  `"8bbdP"Y8  88   `"YbbdP"'   88       88   `"Ybbd8"'
+
+This has been a JoeAnzalone.com Production -->

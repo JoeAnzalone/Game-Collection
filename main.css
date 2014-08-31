@@ -1,0 +1,52 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 19px;
+}
+
+.page-wrap {
+    margin: 0 auto;
+    max-width: 725px;
+}
+
+.games {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.game {
+    margin: 1em 0;
+}
+
+.game .name {
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
+table thead tr,
+table tr:nth-child(even) {
+    background: #d5f0ff;
+}
+
+table td {
+    padding: 0.5em;
+}
